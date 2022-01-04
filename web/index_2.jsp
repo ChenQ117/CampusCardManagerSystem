@@ -9,6 +9,7 @@
       <a href="page/rechargeMenu.jsp">充值</a><br>
       <a href="page/consumptionMenu.jsp">校内消费</a><br>
       <a href="page/chairMenu.jsp">图书馆选座</a><br>
+      <a href="page/Logout">注销</a>
   </body>
 </html>
 <%@ include file="include/footer.jsp"%>

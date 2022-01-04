@@ -32,14 +32,10 @@ public class ChooseChair extends HttpServlet {
         chairUseRecordModel.updateChair();
         ChairModel chairModel = ObjectFactory.createChairModel();
         int bookChairId = chairUseRecordModel.checkBooking(card);
-        System.out.println("35:bookChairId:"+bookChairId);
         if (bookChairId==ChairUseRecordModel.NO_CHAIR){
-            System.out.println("37:座位为空");
             String chairId = request.getParameter("chooseChairId");
-            System.out.println("39 chooseChairId:"+chairId);
             if (chairId==null||"".equals(chairId)){//还未开始选座，显示可用座位列表
                 List<Object> chairs = chairModel.getChairs();
-                System.out.println("42:"+chairs);
                 session.setAttribute("chairList",chairs);
                 response.sendRedirect("chooseChair.jsp");
                 return;

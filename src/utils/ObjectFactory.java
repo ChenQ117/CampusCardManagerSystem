@@ -58,7 +58,4 @@ public class ObjectFactory {
 	public static Card createCardVO(){
 		return new vo.Card();
 	}
-	public static vo.Friend createFriendVO(){
-		return new vo.Friend();
-	}
 }

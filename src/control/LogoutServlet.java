@@ -18,9 +18,8 @@ public class LogoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
         try {
-            session.setAttribute("userid",null);
-            session.setAttribute("friends",null);
-            response.sendRedirect("../index_2.jsp");
+            session.setAttribute("user",null);
+            response.sendRedirect("../form/loginForm.jsp");
         }catch (Exception e){
             e.printStackTrace();
         }

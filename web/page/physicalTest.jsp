@@ -71,7 +71,7 @@
                 </tr>
                 <tr>
 <%--                    onclick="ajaxRequest('../index_1.jsp','',1)"--%>
-                    <td align="right"><button type="button" onclick="ajaxRequest('../index_1.jsp','',1)" >录入</button></td>
+                    <td align="right"><button type="submit" >录入</button></td>
                     <td align="left"><button type="button" onclick="window.location.assign('../index_1.jsp')">取消</button></td>
                 </tr>
                 <%
@@ -80,6 +80,7 @@
                 %>
             </table>
         </form>
+        <a href="../index_1.jsp">返回首页</a>
     </center>
 
 </body>
@@ -87,12 +88,12 @@
 <script>
     function ajaxRequest(url,query,index) {
         var xhttp;
-        var u = ["PhysicalTest?query="+query+"&cardId="+document.getElementById("cardId").value,
-            "PhysicalTest?query="+query+"&cardId="+document.getElementById("cardId2").value+
-            "&item=" + document.getElementById("item").value+
-            "&score="+document.getElementById("score").value+
-            "&name="+document.getElementById("name").value+
-            "&stTime="+document.getElementById("stTime").value
+        var u = ["PhysicalTest?query="+query+"&cardId="+document.getElementById("cardId").value
+            // "PhysicalTest?query="+query+"&cardId="+document.getElementById("cardId2").value+
+            // "&item=" + document.getElementById("item").value+
+            // "&score="+document.getElementById("score").value+
+            // "&name="+document.getElementById("name").value+
+            // "&stTime="+document.getElementById("stTime").value
         ];
         //1.创建对象
         if (window.XMLHttpRequest) {
